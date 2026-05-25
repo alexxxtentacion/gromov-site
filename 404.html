@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Громов & Партнеры</title>
+    <script>
+      (function() {
+        // Запоминаем путь, куда хотел попасть пользователь
+        var redirect = location.pathname + location.search + location.hash;
+        // Сохраняем в sessionStorage
+        sessionStorage.setItem('redirect', redirect);
+        // Перенаправляем на главную
+        location.replace('/gromov-site/');
+      })();
+    </script>
+  </head>
+  <body>
+    Перенаправление...
+  </body>
+</html>

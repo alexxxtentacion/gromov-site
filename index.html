@@ -5,6 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/gromov-site/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gromov-site</title>
+    <script>
+  (function() {
+    var redirect = sessionStorage.getItem('redirect');
+    if (redirect && redirect !== location.pathname) {
+      sessionStorage.removeItem('redirect');
+      // Восстанавливаем маршрут для React
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
     <script type="module" crossorigin src="/gromov-site/assets/index-r0Pu-vJv.js"></script>
     <link rel="stylesheet" crossorigin href="/gromov-site/assets/index-D_3AWfMZ.css">
   </head>
@@ -12,3 +22,7 @@
     <div id="root"></div>
   </body>
 </html>
+
+
+
+
